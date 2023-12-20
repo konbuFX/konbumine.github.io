@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Minecraft風3Dサンドボックスゲーム</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/174/three.min.js"></script>
+</head>
+<body>
+
+<canvas id="canvas" width="800" height="600"></canvas>
+
+<script>
+  // 3Dグラフィックスライブラリの初期化
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById("canvas").appendChild(renderer.domElement);
+
+  // 3Dモデルの読み込み
+  var model = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({color: 0x00ff00}));
+
+  // ゲームのロジック
+  function update() {
+    // プレイヤーの操作を受け取り、3Dグラフィックスを更新する
+  }
+
+  // ゲームを開始する
+  requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
